@@ -1,0 +1,137 @@
+:root {
+	--font-size-primary: 0.906rem; /* 14.5px */
+	--font-size-secondary: 0.688rem; /* 11px */
+
+	--foreground: rgba(0, 0, 0, 0.75);
+
+	--border-color: rgba(0, 0, 0, 0.55);
+	--border-shorthand: 0.063rem solid var(--border-color);
+
+	/* Button */
+	--button-hover-foreground: rgba(255, 255, 255, 0.9);
+	--button-hover-backround: rgba(0, 0, 0, 0.78);
+	--font-size-button: 0.769rem; /* 12.3px */
+
+	--seven: 0.438rem; /* 7px */
+	--twelve: 0.75rem; /* 12px */
+}
+
+*, *::before, *::after {
+    color: var(--foreground);
+    box-sizing: border-box;
+}
+
+body { /* Left & right spacing is left & right from default body margin + 12px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 91vh;
+    margin-top: 4.5vh;
+    margin-bottom: 4.5vh;
+    padding: var(--twelve);
+    font-size: var(--font-size-primary);
+    text-align: center;
+}
+
+main {
+    width: 100%;
+	max-width: 32.5rem;
+}
+
+hr {
+	border: none;
+	border-top: var(--border-shorthand);
+}
+
+#tribute-page {
+	border: var(--border-shorthand);
+	padding: calc(var(--twelve) * 2);
+	text-align: justify;
+}
+
+/* Heading / Title */
+
+._title,
+._sub-text {
+	margin: 0;
+}
+
+._title::after {
+	content: " (1962 -2003)";
+	font-size: var(--font-size-primary);
+	font-weight: normal;
+	font-style: italic;
+}
+
+._sub-text {
+	margin-bottom: 1em;
+}
+
+/* Quote / Image */
+
+._picture {
+	height: 14.375rem;
+}
+
+._picture img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.__quote blockquote {
+	margin: 0.9375rem;
+	margin-top: 1.1875rem;
+	margin-bottom: 1.125rem;
+}
+
+/* Description */
+
+.__description p:nth-child(1)::first-letter {
+	font-size: calc(var(--font-size-primary) * 2);
+}
+
+/* Timeline / List */
+
+.__timeline h2 {
+	margin: 1rem 0;
+	font-size: 1.28rem;
+	text-align: center;
+}
+
+.__timeline ul {
+	margin: 0;
+	padding: 0 2.5rem;
+}
+
+.__timeline ul li {
+	margin-bottom: 0.5rem;
+}
+
+.__read-more {
+	margin-top: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Notice / Link */
+
+#notice {
+    margin-top: 0.656rem;
+    padding: 0 var(--seven);
+    font-size: var(--font-size-secondary);
+    line-height: 1.1;
+    word-wrap: break-word;
+}
+
+/* Media Query */
+
+/* Font Size */
+@media (max-width: 30rem) { /* 480px */
+	html {
+		font-size: calc(1rem - 10%);
+	}
+}
+/* -------- */
